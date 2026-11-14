@@ -25,9 +25,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onToggleLang, onOpenContac
     { id: 'retail', num: '06', labelEn: 'Retail', labelAr: 'التجزئة' },
     { id: 'tourism', num: '07', labelEn: 'Tourism', labelAr: 'السياحة' },
     { id: 'restaurants', num: '08', labelEn: 'Restaurants', labelAr: 'المطاعم' },
-    { id: 'opportunities', num: '09', labelEn: 'Opportunities', labelAr: 'فرص الإعلان' },
-    { id: 'packages', num: '10', labelEn: 'Packages', labelAr: 'الباقات والأسعار' },
-    { id: 'contact', num: '11', labelEn: 'Contact', labelAr: 'تواصل معنا' },
+    { id: 'ads', num: '09', labelEn: 'Ads', labelAr: 'الإعلانات' },
+    { id: 'opportunities', num: '10', labelEn: 'Opportunities', labelAr: 'فرص الإعلان' },
+    { id: 'packages', num: '11', labelEn: 'Packages', labelAr: 'الباقات والأسعار' },
+    { id: 'contact', num: '12', labelEn: 'Contact', labelAr: 'تواصل معنا' },
   ];
 
   useEffect(() => {

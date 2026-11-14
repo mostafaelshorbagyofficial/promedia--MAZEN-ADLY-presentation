@@ -54,7 +54,7 @@ export const Packages: React.FC<PackagesProps> = ({ lang }) => {
       ? `مرحباً ProMedia، أنا مهتم بباقة ${pkgName} الخاصة بمازن عدلي. أريد معرفة المزيد من التفاصيل.`
       : `Hello ProMedia, I'm interested in the ${pkgName} package for Mazen Adly. Please provide more details.`;
     
-    return `https://wa.me/201283925658?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/201110070072?text=${encodeURIComponent(message)}`;
   };
 
   return (
@@ -181,7 +181,7 @@ export const Packages: React.FC<PackagesProps> = ({ lang }) => {
                   </a>
 
                   <div className="mt-2 text-center text-[11px] text-slate-400 font-mono">
-                    WhatsApp: 01283925658
+                    WhatsApp: +20 11 10070072
                   </div>
                 </div>
 
@@ -198,8 +198,8 @@ export const Packages: React.FC<PackagesProps> = ({ lang }) => {
           </div>
           <p className="text-xs text-slate-600 leading-relaxed">
             {isAr
-              ? 'الأسعار الموضحة أعلاه هي الأسعار الرسمية المعتمدة بالجنيه المصري (EGP). يتم حجز الحملات والجدولة الزمنية مباشرة عبر واتساب المبيعات الرسمي: 01283925658.'
-              : 'All rates shown above are official and confirmed in Egyptian Pounds (EGP). Inquiries and campaign scheduling are handled directly through official WhatsApp: 01283925658.'}
+              ? 'الأسعار الموضحة أعلاه هي الأسعار الرسمية المعتمدة بالجنيه المصري (EGP). يتم حجز الحملات والجدولة الزمنية مباشرة عبر واتساب المبيعات الرسمي: +20 11 10070072.'
+              : 'All rates shown above are official and confirmed in Egyptian Pounds (EGP). Inquiries and campaign scheduling are handled directly through official WhatsApp: +20 11 10070072.'}
           </p>
         </div>
 

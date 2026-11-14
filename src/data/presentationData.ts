@@ -19,7 +19,7 @@ export interface PortfolioItem {
   id: string;
   reelId: string;
   url: string;
-  category: 'sports' | 'retail' | 'tourism' | 'restaurants';
+  category: 'sports' | 'retail' | 'tourism' | 'restaurants' | 'ads';
   titleEn: string;
   titleAr: string;
   descriptionEn: string;
@@ -148,6 +148,13 @@ export interface PresentationData {
       descriptionAr: string;
       items: PortfolioItem[];
     };
+    ads: {
+      titleEn: string;
+      titleAr: string;
+      descriptionEn: string;
+      descriptionAr: string;
+      items: PortfolioItem[];
+    };
   };
   opportunities: AdvertisingOpportunity[];
   packages: CommercialPackage[];
@@ -181,9 +188,9 @@ export const presentationData: PresentationData = {
     },
     contact: {
       email: "info@pro-media.com",
-      whatsapp: "https://wa.me/201283925658?text=Hello%20ProMedia%20Team%2C%20I%20am%20interested%20in%20an%20advertising%20partnership%20with%20Mazen%20Adly",
-      whatsappNumber: "01283925658",
-      whatsappInternational: "+20 128 392 5658",
+      whatsapp: "https://wa.me/201110070072?text=Hello%20ProMedia%20Team%2C%20I%20am%20interested%20in%20an%20advertising%20partnership%20with%20Mazen%20Adly",
+      whatsappNumber: "01110070072",
+      whatsappInternational: "+20 11 10070072",
       salesOfficeEn: "ProMedia Official Partnerships Representation",
       salesOfficeAr: "التمثيل التجاري والشراكات الحصرية — بروميديا",
     }
@@ -562,6 +569,157 @@ export const presentationData: PresentationData = {
           highlightEn: "Tracking Variant",
           highlightAr: "رابط تتبع إضافي",
           isDuplicate: true
+        }
+      ]
+    },
+    ads: {
+      titleEn: "Ads & Commercial Campaigns",
+      titleAr: "الإعلانات والحملات التجارية",
+      descriptionEn: "Proven commercial collaborations showcasing Mazen Adly's ability to deliver authentic, high-engagement branded content across diverse industries — from food and fashion to lifestyle and wellness.",
+      descriptionAr: "تعاونات تجارية ناجحة تثبت قدرة مازن عدلي على تقديم محتوى إعلاني أصيل وعالي التفاعل عبر قطاعات متنوعة — من الأغذية والأزياء إلى أسلوب الحياة والصحة.",
+      items: [
+        {
+          id: "ad-1",
+          reelId: "Db8x1HOtRhB",
+          url: "https://www.instagram.com/reel/Db8x1HOtRhB/?exln=M2FwcWl4Y3piNXY5",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-1.jpg",
+          titleEn: "Life Hack You Need to Try",
+          titleAr: "جربوا الهاك ديه وقولولي رأيكم",
+          descriptionEn: "Fun and engaging life hack video that drives massive audience interaction and shareability.",
+          descriptionAr: "فيديو حيل وأفكار مرحة يحقق تفاعلاً ومشاركات ضخمة من الجمهور.",
+          highlightEn: "High Shareability",
+          highlightAr: "معدل مشاركة عالي"
+        },
+        {
+          id: "ad-2",
+          reelId: "DcTOJ6SNZCh",
+          url: "https://www.instagram.com/reel/DcTOJ6SNZCh/?rpxt=MWZ5NmN1amJlMWJ5cQ==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-2.jpg",
+          titleEn: "A Day in My Life",
+          titleAr: "يوم في حياتي",
+          descriptionEn: "Authentic day-in-the-life vlog with natural brand integrations, 1.5K+ likes and 64 comments.",
+          descriptionAr: "فلوج يوم كامل بأسلوب عفوي مع دمج طبيعي للعلامات التجارية، أكثر من 1500 إعجاب و64 تعليق.",
+          highlightEn: "Authentic Lifestyle Integration",
+          highlightAr: "دمج طبيعي مع أسلوب الحياة"
+        },
+        {
+          id: "ad-3",
+          reelId: "Dcb2S3oRdos",
+          url: "https://www.instagram.com/reel/Dcb2S3oRdos/?srtk=MWowaTdxcjd5c2I0bg==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-3.jpg",
+          titleEn: "Kitchen Restock Together",
+          titleAr: "هنعمل ريستوك للمطبخ مع بعض",
+          descriptionEn: "Engaging kitchen restock video seamlessly integrating food and kitchen product placements.",
+          descriptionAr: "فيديو تنظيم وتجهيز المطبخ بأسلوب ممتع مع دمج طبيعي لمنتجات الأغذية والمطبخ.",
+          highlightEn: "Product Placement Excellence",
+          highlightAr: "دمج منتجات احترافي"
+        },
+        {
+          id: "ad-4",
+          reelId: "Dc_v8lGxoUD",
+          url: "https://www.instagram.com/reel/Dc_v8lGxoUD/?mdxt=MXF6ZnY4MDByNm5uZg==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-4.jpg",
+          titleEn: "This Invention You Must Try — Domty & Kitchenista",
+          titleAr: "اللي مجربش الاختراع ده فايته كتير — دومتي وكيتشنيستا",
+          descriptionEn: "Sponsored collaboration with Domty Bakery & Kitchenista — creative product discovery driving high engagement.",
+          descriptionAr: "تعاون إعلاني مع دومتي بيكري وكيتشنيستا — اكتشاف منتجات بأسلوب إبداعي يحقق تفاعل عالي.",
+          highlightEn: "Brand Collaboration",
+          highlightAr: "تعاون تجاري ناجح"
+        },
+        {
+          id: "ad-5",
+          reelId: "DdHT8mytvMa",
+          url: "https://www.instagram.com/reel/DdHT8mytvMa/?cplk=NHB6cXVwdTBhNmpi",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-5.jpg",
+          titleEn: "1 Pants = 5 Outfits — Fashion Styling",
+          titleAr: "بنطلون واحد = 5 إطلالات — تنسيق أزياء",
+          descriptionEn: "Fashion styling content showing versatile outfit combinations — 511 likes, 28 comments.",
+          descriptionAr: "محتوى تنسيق أزياء يعرض 5 إطلالات مختلفة من بنطلون واحد — 511 إعجاب و28 تعليق.",
+          highlightEn: "Fashion & Retail Impact",
+          highlightAr: "تأثير في الموضة والتجزئة"
+        },
+        {
+          id: "ad-6",
+          reelId: "DYSgeFeNRpk",
+          url: "https://www.instagram.com/reel/DYSgeFeNRpk/?dlrf=MWhjdHBmNTl6bWllNA==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-6.jpg",
+          titleEn: "Comedy & Entertainment Branded Skit",
+          titleAr: "سكتش كوميدي ترفيهي إعلاني",
+          descriptionEn: "Hilarious comedy skit with seamless commercial messaging — maximum entertainment value.",
+          descriptionAr: "سكتش كوميدي مضحك مع رسائل إعلانية مدمجة بسلاسة — ترفيه بأعلى مستوى.",
+          highlightEn: "Viral Entertainment",
+          highlightAr: "محتوى فيروسي ممتع"
+        },
+        {
+          id: "ad-7",
+          reelId: "DUUAbkuDZBO",
+          url: "https://www.instagram.com/reel/DUUAbkuDZBO/?exln=eXc0dmRzamo1bWZj",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-7.jpg",
+          titleEn: "Hopefully Orders Come In! — E-commerce Ad",
+          titleAr: "يارب يجيلو أوردرات — إعلان تجارة إلكترونية",
+          descriptionEn: "Relatable e-commerce promotional content that drives audience engagement and purchase intent.",
+          descriptionAr: "محتوى إعلاني للتجارة الإلكترونية بأسلوب واقعي يحفز التفاعل ونية الشراء.",
+          highlightEn: "E-Commerce Conversion",
+          highlightAr: "تحفيز الشراء الإلكتروني"
+        },
+        {
+          id: "ad-8",
+          reelId: "DTYOHTZjRY6",
+          url: "https://www.instagram.com/reel/DTYOHTZjRY6/?cplk=MWt4OTV6Nmlocnp2Ng==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-8.jpg",
+          titleEn: "My Engagement Prep — Elmenus Collaboration",
+          titleAr: "خطوبتي اللي بحضرلها — تعاون مع المنيوز",
+          descriptionEn: "Personal story-driven Elmenus food platform collaboration blending life moments with brand exposure.",
+          descriptionAr: "تعاون مع منصة المنيوز يدمج لحظات حياتية شخصية مع ظهور العلامة التجارية بشكل طبيعي.",
+          highlightEn: "Story-Driven Branding",
+          highlightAr: "إعلان عبر القصص الشخصية"
+        },
+        {
+          id: "ad-9",
+          reelId: "DRh-ACfDSeg",
+          url: "https://www.instagram.com/reel/DRh-ACfDSeg/?mdxt=eG4zNDk3amRnMGR3",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-9.jpg",
+          titleEn: "Online Shopping Quality Review — Local Brand Support",
+          titleAr: "مراجعة جودة التسوق الإلكتروني — دعم العلامات المحلية",
+          descriptionEn: "Authentic product quality review supporting local brands — 1.8K+ likes, 32 comments. Genuine testimonial driving trust and conversions.",
+          descriptionAr: "مراجعة حقيقية لجودة المنتجات ودعم العلامات المحلية — أكثر من 1800 إعجاب و32 تعليق. شهادة صادقة تعزز الثقة وتحفز الشراء.",
+          highlightEn: "Trust & Credibility",
+          highlightAr: "ثقة ومصداقية عالية"
+        },
+        {
+          id: "ad-10",
+          reelId: "DQ9_yJ7DbmW",
+          url: "https://www.instagram.com/reel/DQ9_yJ7DbmW/?vrfl=MWI3dDVwZTczcnNqag==",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-10.jpg",
+          titleEn: "Siblings' Surprise — Emotional Viral Moment",
+          titleAr: "مفاجأة إخواتي — لحظة عاطفية فيروسية",
+          descriptionEn: "Heartfelt surprise from siblings going mega-viral — 12K+ likes, 72 comments. Emotional content with massive organic reach.",
+          descriptionAr: "مفاجأة مؤثرة من الأخوات حققت انتشاراً واسعاً — أكثر من 12 ألف إعجاب و72 تعليق. محتوى عاطفي بوصول عضوي ضخم.",
+          highlightEn: "Mega Viral — 12K+ Likes",
+          highlightAr: "انتشار فيروسي — 12K+ إعجاب"
+        },
+        {
+          id: "ad-11",
+          reelId: "DNv6D_s2vSy",
+          url: "https://www.instagram.com/reel/DNv6D_s2vSy/?obrf=cXJzdmxod2F2ejQ=",
+          category: "ads",
+          thumbnailUrl: "/assets/thumbnails/ads/ad-11.jpg",
+          titleEn: "Ashwagandha KSM-66 — Dozova Health Supplement Ad",
+          titleAr: "أشواجندا KSM-66 — إعلان مكمل صحي من دوزوفا",
+          descriptionEn: "Health & wellness supplement collaboration with Dozova Egypt — Ashwagandha KSM-66. 2.1K+ likes, 36 comments. Professional sponsored content.",
+          descriptionAr: "تعاون إعلاني مع دوزوفا مصر لمكمل أشواجندا KSM-66 — أكثر من 2100 إعجاب و36 تعليق. محتوى إعلاني احترافي في قطاع الصحة.",
+          highlightEn: "Health & Wellness Sector",
+          highlightAr: "قطاع الصحة والعافية"
         }
       ]
     }

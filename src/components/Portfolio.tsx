@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Film, Play, ExternalLink, Sparkles, ShoppingBag, Palmtree, UtensilsCrossed, Share2, Check, Trophy } from 'lucide-react';
+import { Film, Play, ExternalLink, Sparkles, ShoppingBag, Palmtree, UtensilsCrossed, Share2, Check, Trophy, Megaphone } from 'lucide-react';
 import { InstagramIcon } from './Icons';
 import type { Language, PortfolioItem } from '../data/presentationData';
 import { presentationData } from '../data/presentationData';
@@ -10,7 +10,7 @@ interface PortfolioProps {
 }
 
 export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'sports' | 'retail' | 'tourism' | 'restaurants'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'sports' | 'retail' | 'tourism' | 'restaurants' | 'ads'>('all');
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const isAr = lang === 'ar';
   const { portfolioCategories } = presentationData;
@@ -26,6 +26,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
   const allRetail = portfolioCategories.retail.items;
   const allTourism = portfolioCategories.tourism.items;
   const allRestaurants = portfolioCategories.restaurants.items.filter(item => !item.isDuplicate);
+  const allAds = portfolioCategories.ads?.items || [];
 
   const getFilteredItems = (): PortfolioItem[] => {
     switch (activeCategory) {
@@ -37,9 +38,11 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
         return allTourism;
       case 'restaurants':
         return allRestaurants;
+      case 'ads':
+        return allAds;
       case 'all':
       default:
-        return [...allSports, ...allRetail, ...allTourism, ...allRestaurants];
+        return [...allSports, ...allRetail, ...allTourism, ...allRestaurants, ...allAds];
     }
   };
 
@@ -55,6 +58,8 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
         return <Palmtree className="w-3.5 h-3.5 text-emerald-600" />;
       case 'restaurants':
         return <UtensilsCrossed className="w-3.5 h-3.5 text-amber-600" />;
+      case 'ads':
+        return <Megaphone className="w-3.5 h-3.5 text-violet-600" />;
       default:
         return <Film className="w-3.5 h-3.5 text-slate-700" />;
     }
@@ -70,6 +75,8 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
         return 'border-emerald-200 text-emerald-700 bg-emerald-50';
       case 'restaurants':
         return 'border-amber-200 text-amber-800 bg-amber-50';
+      case 'ads':
+        return 'border-violet-200 text-violet-700 bg-violet-50';
       default:
         return 'border-slate-200 text-slate-700 bg-slate-100';
     }
@@ -85,6 +92,8 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
         return isAr ? 'السياحة والوجهات' : 'TOURISM';
       case 'restaurants':
         return isAr ? 'المطاعم والضيافة' : 'RESTAURANTS';
+      case 'ads':
+        return isAr ? 'إعلانات وحملات' : 'ADS & CAMPAIGNS';
       default:
         return category.toUpperCase();
     }
@@ -99,6 +108,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
       <div id="retail" className="absolute top-1/4" />
       <div id="tourism" className="absolute top-2/4" />
       <div id="restaurants" className="absolute top-3/4" />
+      <div id="ads" className="absolute" style={{ top: '85%' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -115,8 +125,8 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
 
           <p className="text-base sm:text-lg text-slate-600">
             {isAr 
-              ? 'محتوى إبداعي متخصص يغطي قطاعات الرياضة والسباحة، التجزئة، السياحة، وتجارب المطاعم بنجاحات موثقة.' 
-              : 'Creative content across Sports & Fitness, Retail, Tourism, and Restaurants with verified viral performance.'}
+              ? 'محتوى إبداعي متخصص يغطي قطاعات الرياضة والسباحة، التجزئة، السياحة، المطاعم، والإعلانات التجارية بنجاحات موثقة.' 
+              : 'Creative content across Sports & Fitness, Retail, Tourism, Restaurants, and Ads & Campaigns with verified viral performance.'}
           </p>
         </div>
 
@@ -135,7 +145,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>{isAr ? 'كافة القطاعات' : 'All Categories'}</span>
             <span className="text-[11px] px-1.5 py-0.5 rounded-md bg-white/20 font-bold">
-              {allSports.length + allRetail.length + allTourism.length + allRestaurants.length}
+              {allSports.length + allRetail.length + allTourism.length + allRestaurants.length + allAds.length}
             </span>
           </button>
 
@@ -189,6 +199,19 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
           >
             <UtensilsCrossed className="w-3.5 h-3.5 text-amber-300" />
             <span>{isAr ? 'المطاعم والضيافة (4)' : 'Restaurants (4)'}</span>
+          </button>
+
+          {/* Ads & Campaigns */}
+          <button
+            onClick={() => setActiveCategory('ads')}
+            className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 min-h-[44px] touch-manipulation ${
+              activeCategory === 'ads'
+                ? 'bg-violet-600 text-white shadow-md shadow-violet-600/25'
+                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 shadow-xs'
+            }`}
+          >
+            <Megaphone className="w-3.5 h-3.5 text-violet-300" />
+            <span>{isAr ? 'الإعلانات والحملات (11)' : 'Ads & Campaigns (11)'}</span>
           </button>
 
         </div>
@@ -301,8 +324,8 @@ export const Portfolio: React.FC<PortfolioProps> = ({ lang, onSelectReel }) => {
         <div className="mt-12 p-4 rounded-xl bg-white border border-slate-200 text-center max-w-2xl mx-auto text-xs text-slate-600 shadow-xs">
           <p>
             {isAr 
-              ? 'ملاحظة توثيقية: تم تضمين معاينة بصرية حقيقية لكافة الروابط الرسمية الموردة بما فيها قسم الرياضة والسباحة الجديد، لتوفير تجربة عرض تفاعلية استثنائية للعلامات التجارية.' 
-              : 'Documentation note: Real frame previews are retrieved for all supplied Reel showcases, including the new dedicated Sports & Swimming section.'}
+              ? 'ملاحظة توثيقية: تم تضمين معاينة بصرية حقيقية لكافة الروابط الرسمية الموردة بما فيها قسم الرياضة والسباحة وقسم الإعلانات والحملات التجارية، لتوفير تجربة عرض تفاعلية استثنائية للعلامات التجارية.' 
+              : 'Documentation note: Real frame previews are retrieved for all supplied Reel showcases, including the Sports & Swimming section and the Ads & Campaigns section.'}
           </p>
         </div>
 

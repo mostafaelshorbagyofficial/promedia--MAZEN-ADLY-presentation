@@ -49,7 +49,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         ? `مرحباً ProMedia، أنا مهتم بباقة ${pkgName} الخاصة بمازن عدلي. أريد معرفة المزيد من التفاصيل.\nالاسم: ${formData.name || 'عميل'}\nالشركة: ${formData.company || 'علامة تجارية'}`
         : `Hello ProMedia, I'm interested in the ${pkgName} package for Mazen Adly. Please provide more details.\nName: ${formData.name || 'Client'}\nCompany: ${formData.company || 'Brand'}`
     );
-    return `https://wa.me/201283925658?text=${text}`;
+    return `https://wa.me/201110070072?text=${text}`;
   };
 
   return (
