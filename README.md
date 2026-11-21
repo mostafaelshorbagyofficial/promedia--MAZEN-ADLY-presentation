@@ -1,5 +1,12 @@
 # ProMedia × Mazen Adly — Official Digital Media Kit & Presentation
 
+![Live Preview](./public/preview.jpg)
+
+🌐 **Live Production Deployment:** [promedia-mazen-adly-presentation.vercel.app](https://promedia-mazen-adly-presentation.vercel.app)  
+👨‍💻 **Engineering & Execution:** [Mostafa Mohamed Farhat (Elshorbagy)](https://mostafa-portfolio-iota.vercel.app/) — *Interactive Creator Digital Media Kit Engineering (ProMedia)*
+
+---
+
 An interactive, high-performance commercial presentation and digital media kit representing **Mazen Adly (مازن عدلي)**, exclusively managed and presented by **ProMedia**.
 
 Built with React 19, TypeScript, Tailwind CSS, and Vite.
